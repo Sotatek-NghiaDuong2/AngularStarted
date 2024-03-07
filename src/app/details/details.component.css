@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  gap: 16px;
+}
+
+.img {
+  width: 50%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.name {
+  color: var(--primary);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.location {
+  font-size: 14px;
+}
+
+.features {
+  margin-top: 24px;
+}
+
+.heading {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.feature {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.btnApply {
+  margin-top: 16px;
+}
+
+.applySection {
+  margin-top: 16px;
+}
+
+.mt-8px {
+  margin-top: 8px;
+}

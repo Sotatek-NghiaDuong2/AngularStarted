@@ -1,0 +1,64 @@
+<article class="container">
+  <img
+    alt="Exterior photo of {{ housingLocation?.name }}"
+    [src]="housingLocation?.photo"
+    class="img"
+  />
+  <div>
+    <section>
+      <h2 class="name">{{ housingLocation?.name }}</h2>
+      <span class="location"
+        >{{ housingLocation?.city }}, {{ housingLocation?.state }}</span
+      >
+    </section>
+    <section class="features">
+      <h2 class="heading">About this housing location</h2>
+      <ul>
+        <li class="feature">
+          Units available: {{ housingLocation?.availableUnits }}
+        </li>
+        <li class="feature">
+          Does this location have wifi:
+          {{ housingLocation?.wifi ? "Yes" : "No" }}
+        </li>
+        <li class="feature">
+          Does this location have laundry:
+          {{ housingLocation?.laundry ? "Yes" : "No" }}
+        </li>
+      </ul>
+    </section>
+    <section class="applySection">
+      <h2 class="heading">Apply now to live here</h2>
+      <form [formGroup]="applyForm" (submit)="submitApplication()">
+        <label for="firstName" class="label"> First Name </label>
+        <input
+          id="firstName"
+          type="text"
+          formControlName="firstName"
+          class="input"
+          placeholder="Enter First Name"
+        />
+
+        <label for="lastName" class="label mt-8px"> Last Name </label>
+        <input
+          id="lastName"
+          type="text"
+          formControlName="lastName"
+          class="input"
+          placeholder="Enter Last Name"
+        />
+
+        <label for="email" class="label mt-8px"> Email </label>
+        <input
+          id="email"
+          type="text"
+          formControlName="email"
+          class="input"
+          placeholder="Enter Email"
+        />
+
+        <button type="submit" class="btn btnApply">Apply Now</button>
+      </form>
+    </section>
+  </div>
+</article>
